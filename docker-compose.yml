@@ -38,4 +38,4 @@ services:
             restart: always 
             build: ./front/front-upskilling
             ports:
-              - "5174:5174"
+              - "5173:5173"
