@@ -11,15 +11,15 @@ function App() {
 const [datosAMostrar,setDatosAMostrar]=useState([])
 
 async function  handleClick(payload){
-   let sale= await axios.get(`http://localhost:8000/${payload}`)
+   let sale= await axios.get(`http://gateway:8000/${payload}`)
     //console.log(sale.data)
-    setDatosAMostrar(sale.data)
+    setDatosAMostrar(sale.data.data)
 
      return sale.data
             
 }
 console.log(datosAMostrar)
-console.log('object.entries',Object.entries(datosAMostrar))
+//console.log('object.entries',Object.entries(datosAMostrar))
   return (
       <div className="card">    
         <h1>Prueba de microservicios en virtual Machine</h1>
@@ -33,7 +33,7 @@ console.log('object.entries',Object.entries(datosAMostrar))
   <li>Nombres:</li>
   {datosAMostrar.map((e) => (
     <li key={e._id}>
-       {e.name?e.name:e.title}{e.films?.map(elem=>elem.title).join(' ')}
+       {e.name?e.name:e.title}{'  films: '}{e.films?.map(elem=>elem.title).join(' ')}
     </li>
 
   ))}
