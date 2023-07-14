@@ -1,4 +1,5 @@
+const { catchedAsync } = require("../utils");
 module.exports={
-    getPlanets:require('./getPlanetsController.js'),
-    postPlanet:require('./postPlanetControllers.js')
+    getPlanets:catchedAsync (require('./getPlanetsController.js')),
+    postPlanet: catchedAsync (require('./postPlanetControllers.js'))
 }

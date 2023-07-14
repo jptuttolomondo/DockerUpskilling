@@ -1,1 +1,5 @@
-module.exports=require('./response.js')
+module.exports = {
+    response: require("./response"),
+    catchedAsync: require("./catchedAsync"),
+    error: require("./errors"),
+  };

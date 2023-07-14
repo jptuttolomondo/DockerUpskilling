@@ -1,4 +1,5 @@
+const { catchedAsync } = require("../utils");
 module.exports = {
-  getCharacters: require("./getCharactersController.js"),
-  postCharacter: require("./postCharacterController.js"),
+  getCharacters: catchedAsync(require("./getCharactersController.js")),
+  postCharacter: catchedAsync(require("./postCharacterController.js")),
 };

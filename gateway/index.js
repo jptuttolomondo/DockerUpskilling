@@ -1,8 +1,10 @@
 const express=require('express')
 const morgan=require('morgan')
+const cors=require('cors')
 const {createProxyMiddleware}=require("http-proxy-middleware")
 const app= express()
 app.use(morgan("dev"))
+app.use(cors())
 app.use("/characters",createProxyMiddleware({
     target:"http://characters:8001",
     changeOrigin:true,
@@ -23,7 +25,3 @@ app.use("/planets",createProxyMiddleware({
 }))
 
 
-// app.use("/database",createProxyMiddleware({
-//     target:"http://database:8004",
-//     changeOrigin:true,
-// }))

@@ -7,4 +7,7 @@ module.exports = {
   
     return characters.data;
   },
+  create: async () => {
+    throw Error("hay un error al crear el personaje, desde el index de data");
+  },
 };
