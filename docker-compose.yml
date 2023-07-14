@@ -33,3 +33,9 @@ services:
             build: ./database
             ports:
               - "8004:8004"
+        front-upskilling:
+            container_name: front-upskilling
+            restart: always 
+            build: ./front/front-upskilling
+            ports:
+              - "5174:5174"
