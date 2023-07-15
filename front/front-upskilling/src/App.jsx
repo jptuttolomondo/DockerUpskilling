@@ -2,6 +2,7 @@
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
 import axios from 'axios'
+import IP_VM from './config/envs.js'
 import './App.css'
 import { useState } from 'react'
 //import { useState } from 'react'
@@ -11,7 +12,7 @@ function App() {
 const [datosAMostrar,setDatosAMostrar]=useState([])
 
 async function  handleClick(payload){
-   let sale= await axios.get(`http://34.16.152.13:8000/${payload}`)
+   let sale= await axios.get(`http://${IP_VM}/${payload}`)
     //console.log(sale.data)
     setDatosAMostrar(sale.data.data)
 
