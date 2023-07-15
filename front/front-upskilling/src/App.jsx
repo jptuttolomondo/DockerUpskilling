@@ -11,7 +11,7 @@ function App() {
 const [datosAMostrar,setDatosAMostrar]=useState([])
 
 async function  handleClick(payload){
-   let sale= await axios.get(`http://gateway:8000/${payload}`)
+   let sale= await axios.get(`http://34.16.152.13:8000/${payload}`)
     //console.log(sale.data)
     setDatosAMostrar(sale.data.data)
 
