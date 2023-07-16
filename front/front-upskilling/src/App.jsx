@@ -1,11 +1,6 @@
-//import { useState } from 'react'
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
 import axios from 'axios'
-//import IP_VM from './config/envs.js'
 import './App.css'
 import { useState } from 'react'
-//import { useState } from 'react'
 
 function App() {
 console.log('IP_VM: ',import.meta.env.IP_VM)
@@ -13,14 +8,11 @@ const [datosAMostrar,setDatosAMostrar]=useState([])
 
 async function  handleClick(payload){
    let sale= await axios.get(`http://34.16.152.13:8000/${payload}`)
-    //console.log(sale.data)
-    setDatosAMostrar(sale.data.data)
-
+      setDatosAMostrar(sale.data.data)
      return sale.data
-            
+           
 }
-console.log(datosAMostrar)
-//console.log('object.entries',Object.entries(datosAMostrar))
+
   return (
       <div className="card">    
         <h1>Prueba de microservicios en virtual Machine</h1>
@@ -39,12 +31,7 @@ console.log(datosAMostrar)
 
   ))}
 </ul>
-       <div></div>
-       <div></div>
-
-      </div>
-
- 
+          </div>
   )
 }
 
