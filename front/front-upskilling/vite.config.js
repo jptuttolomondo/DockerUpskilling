@@ -7,9 +7,8 @@ export default defineConfig({
     host: true,
     strictPort: true,
     port: 5173,
-    IP_VM:import.meta.env.IP_VM,
     watch: {
-      usePolling: true
+    usePolling: true
     }
   }
 })
