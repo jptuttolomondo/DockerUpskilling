@@ -2,13 +2,13 @@
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
 import axios from 'axios'
-import IP_VM from './config/envs.js'
+//import IP_VM from './config/envs.js'
 import './App.css'
 import { useState } from 'react'
 //import { useState } from 'react'
 
 function App() {
-console.log('IP_VM: ',IP_VM)
+console.log('IP_VM: ',import.meta.env.IP_VM)
 const [datosAMostrar,setDatosAMostrar]=useState([])
 
 async function  handleClick(payload){
