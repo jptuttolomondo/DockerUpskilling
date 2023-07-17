@@ -3,7 +3,7 @@ import './App.css'
 import { useState } from 'react'
 
 function App() {
-console.log('IP_VM: ',import.meta.env.IP_VM)
+console.log('VITE_IP_VM: ',import.meta.env.VITE_IP_VM)
 const [datosAMostrar,setDatosAMostrar]=useState([])
 
 async function  handleClick(payload){
