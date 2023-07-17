@@ -4,10 +4,11 @@ import { useState } from 'react'
 
 function App() {
 console.log('VITE_IP_VM: ',import.meta.env.VITE_IP_VM)
+const VITE_IP_VM=import.meta.env.VITE_IP_VM
 const [datosAMostrar,setDatosAMostrar]=useState([])
 
 async function  handleClick(payload){
-   let sale= await axios.get(`http://34.16.152.13:8000/${payload}`)
+   let sale= await axios.get(`http://${VITE_IP_VM}/${payload}`)
       setDatosAMostrar(sale.data.data)
      return sale.data
            
